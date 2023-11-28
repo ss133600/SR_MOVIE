@@ -1,3 +1,7 @@
 export const Home = () => {
-  return <div>Home</div>;
+  return <div>
+    {/* <MainBanner>
+    
+    </MainBanner> */}
+    </div>;
 };
