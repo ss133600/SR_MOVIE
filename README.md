@@ -6,6 +6,8 @@
 - [] 폼
 - [] 타이틀
 - [] 폰트어썸
+- [] swiper
+  ($ npm install swiper)
 
 ## todo
 

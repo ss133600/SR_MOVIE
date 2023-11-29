@@ -34,7 +34,7 @@ export const Header = () => {
     <div>
       <SHeader>
         <Logo>
-          <Link to={Routes.home}>SRMOVIE</Link>
+          <Link to={routes.home}>SRMOVIE</Link>
         </Logo>
         <Menu>
           <li>
