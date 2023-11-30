@@ -5,6 +5,7 @@ import { MainBanner } from "./MainBanner";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { IMG_URL } from "../../constants";
+import "swiper/css";
 const Title = styled.h3`
   font-size: 30px;
   font-weight: 700;
