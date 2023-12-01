@@ -1,6 +1,15 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { movieDetail } from "../../api";
+import styled from "styled-components";
+
+const PosterPath = styled.div``;
+const Title = styled.div``;
+const OriginalTitle = styled.div``;
+const VoteAverage = styled.div``;
+const VoteCount = styled.div``;
+const ReleaseData = styled.div``;
+const OverView = styled.div``;
 
 export const Detail = () => {
   const { id } = useParams();
