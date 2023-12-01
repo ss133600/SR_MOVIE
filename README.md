@@ -6,8 +6,8 @@
 - [] 폼
 - [] 타이틀
 - [] 폰트어썸
-- [] swiper
-  ($ npm install swiper)
+- [x] swiper
+      ($ npm install swiper)
 
 ## todo
 
@@ -15,5 +15,6 @@
 - [x] 각 컴포넌트 제작
 - [x] api 설정
 - [] Home ui 및 구성
+- [x] loading 구성
 - [] Detail ui 및 구성
 - [] Search ui 및 구성

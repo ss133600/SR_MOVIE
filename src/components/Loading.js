@@ -1,3 +1,11 @@
+import { ScaleLoader } from "react-spinners";
+
 export const Loading = () => {
-    return<div>Loading</div>
-}
+  return (
+    <div>
+      <container>
+        <ScaleLoader color="blue" />
+      </container>
+    </div>
+  );
+};
