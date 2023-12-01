@@ -15,7 +15,16 @@ export const Detail = () => {
       }
     })();
   }, []);
-  // console.log(params);
 
-  return <div>Detail</div>;
+  return (
+    <div>
+      <PosterPath></PosterPath>
+      <Title></Title>
+      <OriginalTitle></OriginalTitle>
+      <VoteAverage></VoteAverage>
+      <VoteCount></VoteCount>
+      <ReleaseData></ReleaseData>
+      <OverView></OverView>
+    </div>
+  );
 };

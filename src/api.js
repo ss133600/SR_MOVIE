@@ -5,6 +5,7 @@ const nowPlayingUrl = baseUrl + "movie/now_playing" + "?language=ko-kr";
 const popularUrl = baseUrl + "movie/popular" + "?language=ko-kr";
 const commingUrl = baseUrl + "movie/upcoming" + "?language=ko-kr";
 const topRatedUrl = baseUrl + "movie/top_rated" + "?language=ko-kr";
+// const detailUrl = baseUrl + `movie/${id}` + "?language=ko-kr";
 
 const options = {
   method: "GET",

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { IMG_URL } from "../../constants";
 
 const SMainBanner = styled.section`
-  height: 80vh;
+  height: 100vh;
   /* background-color: aliceblue; */
   position: relative;
   padding: 400px 5%;
@@ -46,6 +46,7 @@ const BlackBg = styled.section`
     rgba(9, 27, 51, 0.44254198261335786) 57%,
     rgba(236, 231, 255, 1) 100%
   );
+
   position: absolute;
   top: 0;
   left: 0;
@@ -59,7 +60,6 @@ export const MainBanner = ({ data }) => {
         <h3>{data.title}</h3>
         <p>{data.overview}</p>
       </SMainBanner>
-      ;
     </div>
   );
 };

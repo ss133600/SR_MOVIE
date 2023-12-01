@@ -35,7 +35,6 @@ export const Home = () => {
   }, []);
 
   // console.log(popData);
-
   // console.log(results);
   // console.log(loading);
   // console.log(nowPlayingData);
@@ -50,7 +49,7 @@ export const Home = () => {
           {nowPlayingData && (
             <>
               <MainBanner data={nowPlayingData[0]} />
-              <ShowMovie titleName={"인기있는"} movieData={popData} />
+              <ShowMovie titleName={"인기영화 TOP20"} movieData={popData} />
               <ShowMovie titleName={"상영중"} movieData={nowPlayingData} />
               <ShowMovie titleName={"개봉 예정"} movieData={commingData} />
               <ShowMovie titleName={"평점높은"} movieData={topRatedData} />

@@ -16,7 +16,7 @@ const CoverBg = styled.div`
   height: 400px;
   background: url(${IMG_URL}/w500/${(prop) => prop.$bgUrl}) no-repeat center /
     cover;
-  border-radius: 15px;
+
   margin-bottom: 20px;
   @media screen and (max-width: 450px) {
     height: 150px;
@@ -25,8 +25,9 @@ const CoverBg = styled.div`
 `;
 const MovieTitle = styled.h4`
   font-size: 18px;
+  text-align: center;
   @media screen and (max-width: 450px) {
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 25px;
   }
 `;
@@ -47,11 +48,11 @@ const params = {
     },
     640: {
       spaceBetween: 15,
-      slidesPerView: 4.5,
+      slidesPerView: 3.5,
     },
     330: {
       spaceBetween: 15,
-      slidesPerView: 3.5,
+      slidesPerView: 2.5,
     },
   },
 };
