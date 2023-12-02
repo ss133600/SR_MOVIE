@@ -31,8 +31,8 @@ const MovieTitle = styled.h4`
     line-height: 25px;
   }
 `;
-const Layout = styled.section`
-  padding: 100px 5%;
+const Container = styled.section`
+  padding-bottom: 80px;
   a {
     color: white;
   }
@@ -60,7 +60,7 @@ const params = {
 export const ShowMovie = ({ titleName, movieData }) => {
   return (
     <div>
-      <Layout>
+      <Container>
         <Title>{titleName}</Title>
 
         <Swiper {...params}>
@@ -73,7 +73,7 @@ export const ShowMovie = ({ titleName, movieData }) => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </Layout>
+      </Container>
     </div>
   );
 };

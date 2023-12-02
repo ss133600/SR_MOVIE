@@ -4,6 +4,7 @@ import { MainBanner } from "./MainBanner";
 import "swiper/css";
 import { ShowMovie } from "./ShowMovie";
 import { Loading } from "../../components/Loading";
+import { Layout } from "../../components/Layout";
 
 export const Home = () => {
   const [nowPlayingData, setNowPlayingData] = useState();
@@ -49,10 +50,12 @@ export const Home = () => {
           {nowPlayingData && (
             <>
               <MainBanner data={nowPlayingData[0]} />
-              <ShowMovie titleName={"인기영화 TOP20"} movieData={popData} />
-              <ShowMovie titleName={"상영중"} movieData={nowPlayingData} />
-              <ShowMovie titleName={"개봉 예정"} movieData={commingData} />
-              <ShowMovie titleName={"평점높은"} movieData={topRatedData} />
+              <Layout>
+                <ShowMovie titleName={"인기영화 TOP20"} movieData={popData} />
+                <ShowMovie titleName={"상영중"} movieData={nowPlayingData} />
+                <ShowMovie titleName={"개봉 예정"} movieData={commingData} />
+                <ShowMovie titleName={"평점높은"} movieData={topRatedData} />
+              </Layout>
             </>
           )}
         </div>
