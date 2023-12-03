@@ -1,8 +1,16 @@
 import { Link, Routes } from "react-router-dom";
 import { routes } from "../routes";
 import styled from "styled-components";
+import { useEffect } from "react";
+import { useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCircleUser,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
 
 const SHeader = styled.header`
+  width: 100%;
   padding: 20px 5%;
   display: flex;
   justify-content: space-between;
@@ -10,13 +18,13 @@ const SHeader = styled.header`
   a {
     color: white;
   }
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 10;
 `;
 const Logo = styled.div`
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 700;
 `;
 const Menu = styled.ul`
@@ -26,22 +34,59 @@ const Menu = styled.ul`
   font-size: 18px;
   font-weight: 600;
   li {
-    margin-left: 60px;
+    margin-left: 45px;
   }
 `;
+
+const UserBtn = styled.div`
+  font-size: 35px;
+  font-weight: 900;
+`;
+const SearchBtn = styled.div`
+  font-size: 30px;
+  font-weight: 900;
+`;
 export const Header = () => {
+  const headerRef = useRef();
+
+  const scrollHandler = () => {
+    const pageY = window.scrollY;
+    // console.log(headerRef);
+    if (pageY > 300) {
+      headerRef.current.style.position = "fixed";
+      headerRef.current.style.backgroundColor = "rgba(0,0,0,0.7)";
+      headerRef.current.style.backgroundFilter = "blur(3px)";
+    } else {
+      headerRef.current.style.position = "absolute";
+      headerRef.current.style.backgroundColor = "transparent";
+      headerRef.current.style.backgroundFilter = "blur(0px)";
+    }
+  };
+
+  useEffect(() => {
+    return window.addEventListener("scroll", scrollHandler);
+  });
+
   return (
     <div>
-      <SHeader>
+      <SHeader ref={headerRef}>
         <Logo>
           <Link to={routes.home}>SRMOVIE</Link>
         </Logo>
         <Menu>
           <li>
-            <Link to={routes.search}>Search</Link>
+            <Link to={routes.search}>
+              <SearchBtn>
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
+              </SearchBtn>
+            </Link>
           </li>
           <li>
-            <Link to={routes.user}>User</Link>
+            <Link to={routes.user}>
+              <UserBtn>
+                <FontAwesomeIcon icon={faCircleUser} />
+              </UserBtn>
+            </Link>
           </li>
         </Menu>
       </SHeader>

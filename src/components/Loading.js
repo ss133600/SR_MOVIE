@@ -15,7 +15,7 @@ export const Loading = () => {
   return (
     <div>
       <Container>
-        <ScaleLoader color="blue" />
+        <ScaleLoader color="#FF0060" />
       </Container>
     </div>
   );

@@ -13,18 +13,19 @@ const Title = styled.h3`
   }
 `;
 const CoverBg = styled.div`
-  height: 400px;
+  height: 420px;
   background: url(${IMG_URL}/w500/${(prop) => prop.$bgUrl}) no-repeat center /
     cover;
   border-radius: 15px;
   margin-bottom: 20px;
+
   @media screen and (max-width: 450px) {
-    height: 150px;
+    height: 250px;
     margin-bottom: 15px;
   }
 `;
 const MovieTitle = styled.h4`
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
   @media screen and (max-width: 450px) {
     /* font-size: 16px; */
@@ -35,6 +36,9 @@ const Container = styled.section`
   padding-bottom: 80px;
   a {
     color: white;
+  }
+  @media screen and (max-width: 450px) {
+    padding-bottom: 60px;
   }
 `;
 

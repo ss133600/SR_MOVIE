@@ -5,7 +5,7 @@ const Container = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid white;
+  border-top: solid #ece3ce 0.2px;
 `;
 
 export const Footer = () => {

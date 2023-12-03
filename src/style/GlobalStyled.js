@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
 export const mainColors = {
-  blackColor: "#0C356A",
+  blackColor: "#1d1d1d",
   pointColor: "#FF597B",
 };
 

@@ -14,9 +14,9 @@
 - [x] 스타일 리셋 --------------npm i styled-reset
 - [] 폼 ---------------------npm i react-hook-form
 - [x] 타이틀 -----------------npm i react-helmet
-- [] 폰트어썸
+- [x] 폰트어썸----------------npm i font-awesome
 - [x] swiper -----------------npm i swiper
-- [ ] loading작업 ----------------npm i react-spinners
+- [x] loading작업 ----------------npm i react-spinners
 
 ## todo
 
@@ -25,7 +25,8 @@
 - [x] api 설정
 - [x] Home ui 및 구성
 - [x] loading 구성
-- [] Detail ui 및 구성
-- [] Search ui 및 구성
+- [x] Detail ui 및 구성
+- [x] Search ui 및 구성
+- [x] header 이벤트
 - [] 전체 페이지 helmet 구성
 - [] 404 Page ui 구성

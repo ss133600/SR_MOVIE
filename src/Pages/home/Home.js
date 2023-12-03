@@ -53,10 +53,19 @@ export const Home = () => {
               <PageTitle titleName="HOME" />
               <MainBanner data={nowPlayingData[0]} />
               <Layout>
-                <ShowMovie titleName={"인기영화 TOP20"} movieData={popData} />
-                <ShowMovie titleName={"상영중"} movieData={nowPlayingData} />
-                <ShowMovie titleName={"개봉 예정"} movieData={commingData} />
-                <ShowMovie titleName={"평점높은"} movieData={topRatedData} />
+                <ShowMovie titleName={"인기 영화 TOP 20"} movieData={popData} />
+                <ShowMovie
+                  titleName={"현재 상영 영화"}
+                  movieData={nowPlayingData}
+                />
+                <ShowMovie
+                  titleName={"개봉 예정 영화"}
+                  movieData={commingData}
+                />
+                <ShowMovie
+                  titleName={"평점 높은 영화 TOP 20"}
+                  movieData={topRatedData}
+                />
               </Layout>
             </>
           )}

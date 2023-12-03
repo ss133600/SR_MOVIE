@@ -1,6 +1,12 @@
 import styled from "styled-components";
 import { IMG_URL } from "../../constants";
+import { Link } from "react-router-dom/dist";
 
+const Container = styled.div`
+  a {
+    color: white;
+  }
+`;
 const SMainBanner = styled.section`
   height: 100vh;
   /* background-color: aliceblue; */
@@ -39,7 +45,7 @@ const SMainBanner = styled.section`
 const BlackBg = styled.section`
   width: 100%;
   height: 100vh;
-  background: rgb(24, 32, 27);
+  /* background: rgb(24, 32, 27); */
   background: linear-gradient(
     0deg,
     rgba(24, 32, 27, 1) 0%,
@@ -55,11 +61,15 @@ const BlackBg = styled.section`
 export const MainBanner = ({ data }) => {
   return (
     <div>
-      <SMainBanner $bgUrl={data.backdrop_path}>
-        <BlackBg />
-        <h3>{data.title}</h3>
-        <p>{data.overview}</p>
-      </SMainBanner>
+      <Container>
+        <Link to={`/detail/${data.id}`}>
+          <SMainBanner $bgUrl={data.backdrop_path}>
+            <BlackBg />
+            <h3>{data.title}</h3>
+            <p>{data.overview}</p>
+          </SMainBanner>
+        </Link>
+      </Container>
     </div>
   );
 };
