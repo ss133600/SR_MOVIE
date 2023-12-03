@@ -13,7 +13,7 @@
 - [x] styled-components --------npm i styled-components
 - [x] 스타일 리셋 --------------npm i styled-reset
 - [] 폼 ---------------------npm i react-hook-form
-- [] 타이틀
+- [x] 타이틀 -----------------npm i react-helmet
 - [] 폰트어썸
 - [x] swiper -----------------npm i swiper
 - [ ] loading작업 ----------------npm i react-spinners
@@ -27,3 +27,5 @@
 - [x] loading 구성
 - [] Detail ui 및 구성
 - [] Search ui 및 구성
+- [] 전체 페이지 helmet 구성
+- [] 404 Page ui 구성

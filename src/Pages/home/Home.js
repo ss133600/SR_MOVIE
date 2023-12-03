@@ -5,6 +5,7 @@ import "swiper/css";
 import { ShowMovie } from "./ShowMovie";
 import { Loading } from "../../components/Loading";
 import { Layout } from "../../components/Layout";
+import { PageTitle } from "../../components/PageTitle";
 
 export const Home = () => {
   const [nowPlayingData, setNowPlayingData] = useState();
@@ -39,7 +40,7 @@ export const Home = () => {
   // console.log(results);
   // console.log(loading);
   // console.log(nowPlayingData);
-  console.log(commingData);
+  // console.log(commingData);
 
   return (
     <>
@@ -49,6 +50,7 @@ export const Home = () => {
         <div>
           {nowPlayingData && (
             <>
+              <PageTitle titleName="HOME" />
               <MainBanner data={nowPlayingData[0]} />
               <Layout>
                 <ShowMovie titleName={"인기영화 TOP20"} movieData={popData} />

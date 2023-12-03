@@ -16,7 +16,7 @@ const CoverBg = styled.div`
   height: 400px;
   background: url(${IMG_URL}/w500/${(prop) => prop.$bgUrl}) no-repeat center /
     cover;
-
+  border-radius: 15px;
   margin-bottom: 20px;
   @media screen and (max-width: 450px) {
     height: 150px;
@@ -66,7 +66,7 @@ export const ShowMovie = ({ titleName, movieData }) => {
         <Swiper {...params}>
           {movieData.map((data) => (
             <SwiperSlide key={data.id}>
-              <Link to={`/detail${data.id}`}>
+              <Link to={`/detail/${data.id}`}>
                 <CoverBg $bgUrl={data.poster_path} />
                 <MovieTitle>{data.title}</MovieTitle>
               </Link>

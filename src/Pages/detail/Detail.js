@@ -1,39 +1,118 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { movieDetail } from "../../api";
 import styled from "styled-components";
+import { Loading } from "../../components/Loading";
+import { IMG_URL } from "../../constants";
 
-const PosterPath = styled.div``;
-const Title = styled.div``;
-const OriginalTitle = styled.div``;
-const VoteAverage = styled.div``;
-const VoteCount = styled.div``;
-const ReleaseData = styled.div``;
-const OverView = styled.div``;
+const Container = styled.div`
+  padding: 100px 150px 150px;
+  display: flex;
+  justify-content: center;
+  @media screen and(max-width:550px ) {
+    flex-direction: column;
+    padding: 100px 5%;
+  }
+`;
+const Bg = styled.div`
+  width: 28%;
+  height: 700px;
+  border-radius: 15px;
+  background: url(${IMG_URL}/w1280/${(props) => props.$bgUrl}) no-repeat
+    center/cover;
+
+  @media screen and(max-width:450px ) {
+    width: 100%;
+    height: 500px;
+  }
+`;
+const Con = styled.div`
+  width: 55%;
+  font-size: 20px;
+  padding-top: 50px;
+  margin-left: 100px;
+  @media screen and(max-width:450px ) {
+    width: 100%;
+  }
+`;
+const Title = styled.h3`
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  @media screen and(max-width:450px ) {
+    font-size: 30px;
+  }
+`;
+const Rated = styled.div`
+  font-weight: 400;
+`;
+const Genres = styled.ul`
+  margin: 20px 0;
+  li {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+`;
+const Release = styled.div`
+  margin-bottom: 20px;
+`;
+const Runtime = styled.div``;
+const Desc = styled.p`
+  max-width: 70%;
+  width: 100%;
+  margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 50px;
+  opacity: 0.7;
+  line-height: 1.8em;
+  font-weight: 300;
+  @media screen and(max-width:450px ) {
+    max-width: 100%;
+  }
+`;
 
 export const Detail = () => {
   const { id } = useParams();
+  const [detailData, setDatailData] = useState();
+  const [loading, setLoading] = useState(true);
+  // console.log(id);
 
   useEffect(() => {
     (async () => {
       try {
         const data = await movieDetail(id);
-        console.log(data);
+        setDatailData(data);
+        setLoading(false);
       } catch (error) {
-        console.log("Error:" + error);
+        console.log("Error: " + error);
       }
     })();
   }, []);
 
+  console.log(detailData);
+
   return (
     <div>
-      <PosterPath></PosterPath>
-      <Title></Title>
-      <OriginalTitle></OriginalTitle>
-      <VoteAverage></VoteAverage>
-      <VoteCount></VoteCount>
-      <ReleaseData></ReleaseData>
-      <OverView></OverView>
+      {loading ? (
+        <Loading />
+      ) : (
+        <Container>
+          <Bg $bgUrl={detailData.poster_path} />
+          <Con>
+            <Title>{detailData.title}</Title>
+            <Rated>{Math.round(detailData.vote_average)}점</Rated>
+            <Genres>
+              {detailData.genres.map((genres) => (
+                <li key={genres.id}>{genres.name}</li>
+              ))}
+            </Genres>
+            <Release>{detailData.release_date}</Release>
+            <Runtime>{detailData.runtime}분</Runtime>
+            <Desc>{detailData.overview}</Desc>
+          </Con>
+        </Container>
+      )}
     </div>
   );
 };
