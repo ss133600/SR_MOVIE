@@ -42,16 +42,16 @@ const Menu = styled.ul`
   font-size: 18px;
   font-weight: 600;
   li {
-    margin-left: 45px;
+    margin-left: 35px;
   }
 `;
 
 const UserBtn = styled.div`
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 900;
 `;
 const SearchBtn = styled.div`
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 900;
 `;
 export const Header = () => {

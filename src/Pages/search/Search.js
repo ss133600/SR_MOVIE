@@ -125,6 +125,7 @@ export const Search = () => {
           {...register("search", { required: "검색 내용을 입력해주세요" })}
           type="text"
           placeholder="영화제목을 검색해보세요"
+          autocomplete="off"
         />
       </Form>
       <Layout>

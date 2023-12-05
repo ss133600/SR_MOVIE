@@ -82,6 +82,7 @@ export const Login = () => {
           })}
           type="text"
           placeholder="로그인"
+          autocomplete="off"
         />
         <ErrorMessage text={errors?.username?.message} />
 
@@ -95,6 +96,7 @@ export const Login = () => {
           })}
           type="password"
           placeholder="패스워드"
+          autocomplete="off"
         />
         <ErrorMessage text={errors?.password?.message} />
 

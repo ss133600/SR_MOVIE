@@ -78,10 +78,16 @@ export const Signup = () => {
           })}
           type="text"
           placeholder="로그인"
+          autocomplete="off"
         />
         <ErrorMessage text={errors?.username?.message} />
 
-        <Input {...register("email")} type="text" placeholder="이메일" />
+        <Input
+          {...register("email")}
+          type="text"
+          placeholder="이메일"
+          autocomplete="off"
+        />
 
         <Input
           {...register("name", {
@@ -89,6 +95,7 @@ export const Signup = () => {
           })}
           type="text"
           placeholder="이름"
+          autocomplete="off"
         />
         <ErrorMessage text={errors?.name?.message} />
 
@@ -102,6 +109,7 @@ export const Signup = () => {
           })}
           type="password"
           placeholder="패스워드"
+          autocomplete="off"
         />
         <ErrorMessage text={errors?.password?.message} />
 
