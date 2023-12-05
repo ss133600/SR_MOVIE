@@ -11,7 +11,7 @@ const Wrap = styled.div`
   justify-content: center;
 `;
 const Form = styled.form`
-  max-width: 450px;
+  max-width: 400px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -20,10 +20,12 @@ const Form = styled.form`
   border: 1px solid white;
   padding: 30px 50px;
   border-radius: 15px;
-  margin-top: 5%;
+  margin-top: 100px;
   flex-direction: column;
-  @media screen and (max-width: 900px) {
-    margin-top: 20%;
+  @media screen and (max-width: 650px) {
+    max-width: 350px;
+    height: 650px;
+    width: 100%;
   }
 `;
 const Title = styled.h3`
@@ -41,10 +43,25 @@ const Input = styled.input`
   justify-content: center;
   align-items: center;
   margin-top: 17px;
+  padding-left: 10px;
+  @media screen and (max-width: 650px) {
+    margin-top: 15px;
+  }
 `;
 
 const BottomInfo = styled.div`
   margin-top: 30px;
+  display: flex;
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
+    line-height: 30px;
+  }
+`;
+
+const Span = styled.div`
+  margin-left: 15px;
+  @media screen {
+  }
 `;
 export const Login = () => {
   const {
@@ -81,10 +98,15 @@ export const Login = () => {
         />
         <ErrorMessage text={errors?.password?.message} />
 
-        <ButtonUi active={isValid} text={"로그인"} />
+        <Link to={routes.home}>
+          <ButtonUi active={isValid} text={"로그인"} />
+        </Link>
 
         <BottomInfo>
-          아이디가 없으신가요? <Link to="signup"> 회원가입하기 &rarr;</Link>
+          아이디가 없으신가요?{" "}
+          <Link to={routes.signup}>
+            <Span> 회원가입하기 &rarr;</Span>
+          </Link>
         </BottomInfo>
       </Form>
     </Wrap>

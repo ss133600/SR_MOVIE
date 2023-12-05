@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Button = styled.button`
   all: unset;
-  width: 100%;
+  width: 300px;
   height: 50px;
   text-align: center;
   background-color: #ff597b;
@@ -13,6 +13,9 @@ export const Button = styled.button`
   color: white;
   opacity: ${(props) => (props.$isActive ? 1 : 0.5)};
   cursor: ${(props) => (props.$isActive ? "pointer" : "default")};
+  @media screen and (max-width: 650px) {
+    width: 260px;
+  }
 `;
 
 export const ButtonUi = ({ active, text }) => {

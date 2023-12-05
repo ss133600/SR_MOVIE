@@ -6,21 +6,23 @@ import { Loading } from "../../components/Loading";
 import { IMG_URL } from "../../constants";
 
 const Container = styled.div`
-  padding: 150px 250px 200px;
+  /* padding: 150px 250px 200px; */
+  /* padding: 0px 200px; */
   display: flex;
   justify-content: center;
+  align-items: center;
   background: url(${IMG_URL}/w1280/${(props) => props.$bgUrl}) no-repeat
     center/cover;
   /* filter: blur(5px); */
   @media screen and(max-width:450px ) {
     padding: 0px 0px;
     flex-direction: column;
-    padding: 100px 5%;
+    /* padding: 100px 5%; */
   }
 `;
 const Bg = styled.div`
-  max-width: 35%;
-  width: 1000px;
+  /* max-width: 35%; */
+  width: 35%;
   height: 600px;
   border-radius: 15px;
   background: url(${IMG_URL}/w1280/${(props) => props.$bgUrl}) no-repeat
@@ -35,13 +37,13 @@ const Con = styled.div`
   /* width: 25%; */
   font-size: 20px;
   /* padding-top: 50px; */
-  margin-left: 100px;
+  margin-left: 7%;
   @media screen and(max-width:450px ) {
     width: 100%;
   }
   @media screen and(max-width:1200px ) {
     /* width: 500px; */
-    background-color: wheat;
+    background-color: white;
     flex-direction: column;
   }
 `;
@@ -69,7 +71,7 @@ const Release = styled.div`
 `;
 const Runtime = styled.div``;
 const Desc = styled.p`
-  max-width: 70%;
+  max-width: 370px;
   width: 100%;
   margin-top: 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -82,18 +84,20 @@ const Desc = styled.p`
   }
 `;
 const ConBox = styled.div`
-  max-width: 1200px;
-  width: 100%;
+  /* max-width: 1200px; */
+  width: 80%;
   height: 700px;
   padding: 50px 50px;
   display: flex;
+  margin-top: 10%;
+  margin-bottom: 10%;
   background-color: rgba(0, 0, 0, 0.8);
   /* justify-content: center; */
   align-items: center;
-  border-radius: 10px;
+  border-radius: 15px;
   @media screen and(max-width:1200px ) {
     /* width: 500px; */
-    background-color: wheat;
+    /* background-color: wheat; */
     flex-direction: column;
   }
 `;

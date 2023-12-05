@@ -8,16 +8,17 @@ import { Link } from "react-router-dom/dist";
 
 const Title = styled.div`
   font-size: 35px;
-  margin-left: 150px;
+  margin-left: 10%;
   margin-top: 150px;
   font-weight: 500;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     font-size: 25px;
-    margin-left: 50px;
   }
 `;
 const Form = styled.form`
   margin-left: 150px;
+  margin-left: 10%;
+
   margin-top: 50px;
   position: relative;
   /* margin: 150px auto; */
@@ -33,12 +34,12 @@ const Form = styled.form`
 `;
 const Input = styled.input`
   /* color: #444444; */
-  width: 70%;
+  width: 80%;
   border: none;
   border-bottom: solid #ff0060 1px;
   padding-bottom: 10px;
   padding-top: 10px;
-  padding-left: 40px;
+  padding-left: 10px;
   position: relative;
   background: none;
   z-index: 5;
@@ -59,6 +60,9 @@ const ConWrap = styled.div`
     grid-template-columns: repeat(4, 1fr);
   }
   @media screen and (max-width: 800px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (max-width: 550px) {
     grid-template-columns: repeat(2, 1fr);
   }
 `;
@@ -77,6 +81,13 @@ const Bg = styled.div`
     cover;
   margin-bottom: 20px;
   border-radius: 15px;
+
+  @media screen and (max-width: 800px) {
+    height: 600px;
+  }
+  @media screen and (max-width: 1200px) {
+    height: 300px;
+  }
 `;
 const MovieTitle = styled.div``;
 
