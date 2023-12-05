@@ -2,6 +2,7 @@ export const routes = {
   home: "/",
   detail: "/detail/:id",
   search: "/search",
-  user: "/user",
+  login: "/login",
+  signup: "/signup",
   pagenotfound: "/*",
 };

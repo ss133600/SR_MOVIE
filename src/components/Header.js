@@ -6,9 +6,17 @@ import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleUser,
+  faCompactDisc,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 
+const Line = styled.div`
+  display: flex;
+`;
+const LogoBtn = styled.div`
+  margin: -2px 2px;
+  font-size: 36px;
+`;
 const SHeader = styled.header`
   width: 100%;
   padding: 20px 5%;
@@ -24,7 +32,7 @@ const SHeader = styled.header`
   z-index: 10;
 `;
 const Logo = styled.div`
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 700;
 `;
 const Menu = styled.ul`
@@ -39,11 +47,11 @@ const Menu = styled.ul`
 `;
 
 const UserBtn = styled.div`
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 900;
 `;
 const SearchBtn = styled.div`
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 900;
 `;
 export const Header = () => {
@@ -71,7 +79,15 @@ export const Header = () => {
     <div>
       <SHeader ref={headerRef}>
         <Logo>
-          <Link to={routes.home}>SRMOVIE</Link>
+          <Link to={routes.home}>
+            <Line>
+              SRM
+              <LogoBtn>
+                <FontAwesomeIcon icon={faCompactDisc} />
+              </LogoBtn>
+              VIE
+            </Line>
+          </Link>
         </Logo>
         <Menu>
           <li>
@@ -82,7 +98,7 @@ export const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to={routes.user}>
+            <Link to={routes.login}>
               <UserBtn>
                 <FontAwesomeIcon icon={faCircleUser} />
               </UserBtn>

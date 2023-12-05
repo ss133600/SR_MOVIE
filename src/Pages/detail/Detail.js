@@ -73,7 +73,7 @@ const Desc = styled.p`
   width: 100%;
   margin-top: 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
-  padding-top: 50px;
+  padding-top: 30px;
   opacity: 0.7;
   line-height: 1.8em;
   font-weight: 300;

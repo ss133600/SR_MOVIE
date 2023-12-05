@@ -11,19 +11,31 @@ const Title = styled.div`
   margin-left: 150px;
   margin-top: 150px;
   font-weight: 500;
+  @media screen and (max-width: 600px) {
+    font-size: 25px;
+    margin-left: 50px;
+  }
 `;
 const Form = styled.form`
   margin-left: 150px;
-  margin-top: 40px;
+  margin-top: 50px;
   position: relative;
+  /* margin: 150px auto; */
+  justify-content: center;
+  align-items: center;
   /* width: 100%; */
   /* color: white; */
+  @media screen and (max-width: 600px) {
+    font-size: 19px;
+    margin-left: 50px;
+    margin-top: 40px;
+  }
 `;
 const Input = styled.input`
   /* color: #444444; */
   width: 70%;
   border: none;
-  border-bottom: solid #ff597b 1px;
+  border-bottom: solid #ff0060 1px;
   padding-bottom: 10px;
   padding-top: 10px;
   padding-left: 40px;
@@ -33,12 +45,22 @@ const Input = styled.input`
   outline: none;
   font-size: 25px;
   color: white;
+  @media screen and (max-width: 600px) {
+    font-size: 20px;
+    padding-left: 5px;
+  }
 `;
 const ConWrap = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   column-gap: 30px;
   row-gap: 50px;
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media screen and (max-width: 800px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 const Con = styled.div`
   a {
