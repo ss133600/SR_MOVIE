@@ -56,6 +56,8 @@ const BottomInfo = styled.div`
 
 const Span = styled.div`
   margin-left: 15px;
+  text-decoration: none;
+  color: white;
 `;
 
 export const Signup = () => {

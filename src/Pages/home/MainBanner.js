@@ -45,12 +45,13 @@ const SMainBanner = styled.section`
 const BlackBg = styled.section`
   width: 100%;
   height: 100vh;
-  /* background: rgb(24, 32, 27); */
+  background: rgb(255, 255, 255);
   background: linear-gradient(
-    0deg,
-    rgba(24, 32, 27, 1) 0%,
-    rgba(9, 27, 51, 0.44254198261335786) 57%,
-    rgba(236, 231, 255, 1) 100%
+    180deg,
+    rgba(255, 255, 255, 0.39280125195618154) 0%,
+    rgba(130, 130, 130, 0.29744397759103647) 25%,
+    rgba(54, 54, 54, 0.6924019607843137) 45%,
+    rgba(0, 0, 0, 0.7876400560224089) 65%
   );
 
   position: absolute;

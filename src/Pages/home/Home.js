@@ -6,6 +6,7 @@ import { ShowMovie } from "./ShowMovie";
 import { Loading } from "../../components/Loading";
 import { Layout } from "../../components/Layout";
 import { PageTitle } from "../../components/PageTitle";
+import { useScrollTop } from "../../lib/useScrollTop";
 
 export const Home = () => {
   const [nowPlayingData, setNowPlayingData] = useState();
@@ -13,6 +14,7 @@ export const Home = () => {
   const [commingData, setCommingData] = useState();
   const [topRatedData, setTopRatedData] = useState();
   const [loading, setLoading] = useState(true);
+  useScrollTop();
 
   useEffect(() => {
     (async () => {

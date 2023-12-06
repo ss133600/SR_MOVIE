@@ -1,8 +1,14 @@
 ## 앱이름
 
+    SRMOVIE
+
 ## 앱 사용목적
 
+    인기영화, 현재 상영 영화, 개봉예정 영화, 평점 높은 영화를 쉽게 알수있고, 영화의 세부 정보나, 영화를 검색기능 까지 구현되어 영화에관해서 이용하기 좋은 앱입니다.
+
 ## 제작의도
+
+    영화에 관심이 있는 사람들을 위해 편하고 쉽게 영화정보를 얻을 수 있도록 제작해보았다.
 
 -
 
@@ -12,7 +18,7 @@
 - [x] react-router-dom ----------npm i react-router-dom
 - [x] styled-components --------npm i styled-components
 - [x] 스타일 리셋 --------------npm i styled-reset
-- [] 폼 ---------------------npm i react-hook-form
+- [x] 폼 ---------------------npm i react-hook-form
 - [x] 타이틀 -----------------npm i react-helmet
 - [x] 폰트어썸----------------npm i font-awesome
 - [x] swiper -----------------npm i swiper
@@ -28,5 +34,5 @@
 - [x] Detail ui 및 구성
 - [x] Search ui 및 구성
 - [x] header 이벤트
-- [] 전체 페이지 helmet 구성
+- [x] 전체 페이지 helmet 구성
 - [] 404 Page ui 구성

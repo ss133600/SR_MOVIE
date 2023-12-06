@@ -60,6 +60,9 @@ const BottomInfo = styled.div`
 
 const Span = styled.div`
   margin-left: 15px;
+  text-decoration: none;
+  color: white;
+
   @media screen {
   }
 `;
@@ -71,6 +74,7 @@ export const Login = () => {
   } = useForm();
 
   const loginHandler = () => {};
+
   return (
     <Wrap>
       <Form onSubmit={handleSubmit(loginHandler)}>
@@ -100,9 +104,7 @@ export const Login = () => {
         />
         <ErrorMessage text={errors?.password?.message} />
 
-        <Link to={routes.home}>
-          <ButtonUi active={isValid} text={"로그인"} />
-        </Link>
+        <ButtonUi active={isValid} text={"로그인"} />
 
         <BottomInfo>
           아이디가 없으신가요?{" "}

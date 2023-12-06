@@ -6,6 +6,24 @@ import { Loading } from "../../components/Loading";
 import { IMG_URL } from "../../constants";
 import { useScrollTop } from "../../lib/useScrollTop";
 
+const ConBox = styled.div`
+  /* max-width: 1200px; */
+  width: 70%;
+  height: 700px;
+  padding: 50px 50px;
+  display: flex;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  /* flex-direction: column; */
+  align-items: center;
+  border-radius: 15px;
+  @media screen and(max-width:1200px ) {
+    display: none;
+    flex-direction: column;
+  }
+`;
 const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -15,25 +33,23 @@ const Container = styled.div`
   /* filter: blur(5px); */
   @media screen and(max-width:450px ) {
     padding: 0px 0px;
-    flex-direction: column;
+    /* flex-direction: column; */
     /* padding: 100px 5%; */
   }
 `;
 const Bg = styled.div`
   /* max-width: 35%; */
-  width: 35%;
+  width: 400px;
   height: 600px;
   border-radius: 15px;
   background: url(${IMG_URL}/w1280/${(props) => props.$bgUrl}) no-repeat
     center/cover;
-
-  @media screen and(max-width:450px ) {
-    width: 100%;
-    height: 500px;
+  @media screen and(max-width:1200px ) {
+    width: 70px;
   }
 `;
 const Con = styled.div`
-  /* width: 25%; */
+  width: 40%;
   font-size: 20px;
   /* padding-top: 50px; */
   margin-left: 7%;
@@ -44,6 +60,7 @@ const Con = styled.div`
     /* width: 500px; */
     background-color: white;
     flex-direction: column;
+    display: none;
   }
 `;
 const Title = styled.h3`
@@ -80,25 +97,6 @@ const Desc = styled.p`
   font-weight: 300;
   @media screen and(max-width:450px ) {
     max-width: 100%;
-  }
-`;
-const ConBox = styled.div`
-  /* max-width: 1200px; */
-  width: 80%;
-  height: 700px;
-  padding: 50px 50px;
-  display: flex;
-  margin-top: 10%;
-  margin-bottom: 10%;
-  background-color: rgba(0, 0, 0, 0.8);
-  /* justify-content: center; */
-  flex-direction: column;
-  align-items: center;
-  border-radius: 15px;
-  @media screen and(max-width:1200px ) {
-    /* width: 500px; */
-    /* background-color: wheat; */
-    flex-direction: column;
   }
 `;
 
