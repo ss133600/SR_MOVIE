@@ -11,6 +11,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "build": "^0.1.4",
     "font-awesome": "^4.7.0",
     "node-fetch": "^2.7.0",
     "react": "^18.2.0",
@@ -32,6 +33,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "http://ss133600.github.io/SR_MOVIE/#/",
   "eslintConfig": {
     "extends": [
       "react-app",
