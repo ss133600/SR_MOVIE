@@ -4,10 +4,9 @@ import { movieDetail } from "../../api";
 import styled from "styled-components";
 import { Loading } from "../../components/Loading";
 import { IMG_URL } from "../../constants";
+import { useScrollTop } from "../../lib/useScrollTop";
 
 const Container = styled.div`
-  /* padding: 150px 250px 200px; */
-  /* padding: 0px 200px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,6 +92,7 @@ const ConBox = styled.div`
   margin-bottom: 10%;
   background-color: rgba(0, 0, 0, 0.8);
   /* justify-content: center; */
+  flex-direction: column;
   align-items: center;
   border-radius: 15px;
   @media screen and(max-width:1200px ) {
@@ -106,7 +106,7 @@ export const Detail = () => {
   const { id } = useParams();
   const [detailData, setDatailData] = useState();
   const [loading, setLoading] = useState(true);
-  // console.log(id);
+  useScrollTop();
 
   useEffect(() => {
     (async () => {
