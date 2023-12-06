@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/SR_MOVIE/static/css/main.900c1a46.css",
+    "main.js": "/SR_MOVIE/static/js/main.47ed85b9.js",
+    "index.html": "/SR_MOVIE/index.html",
+    "main.900c1a46.css.map": "/SR_MOVIE/static/css/main.900c1a46.css.map",
+    "main.47ed85b9.js.map": "/SR_MOVIE/static/js/main.47ed85b9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.900c1a46.css",
+    "static/js/main.47ed85b9.js"
+  ]
+}
