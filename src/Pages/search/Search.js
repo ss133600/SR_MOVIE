@@ -103,19 +103,14 @@ export const Search = () => {
   const [term, setTerm] = useState();
 
   const searchHandler = async (data) => {
-    // console.log(data);
     const { search: keyword } = data;
-    // console.log("검색결과: " + search);
 
     try {
       const { results } = await movieSearch(keyword);
       setTerm(results);
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
-  console.log(term);
   return (
     <div>
       <Title>찾으시는 영화가 있으신가요?</Title>

@@ -113,12 +113,12 @@ export const Detail = () => {
         setDatailData(data);
         setLoading(false);
       } catch (error) {
-        console.log("Error: " + error);
+        // console.log("Error: " + error);
       }
     })();
   }, []);
 
-  console.log(detailData);
+  // console.log(detailData);
 
   return (
     <div>

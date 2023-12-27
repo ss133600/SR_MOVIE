@@ -33,7 +33,7 @@ export const Home = () => {
 
         setLoading(false);
       } catch (error) {
-        console.log("에러:" + error);
+        // console.log("에러:" + error);
       }
     })();
   }, []);

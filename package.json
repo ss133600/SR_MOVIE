@@ -32,7 +32,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npmrun bild",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "homepage": "http://ss133600.github.io/SR_MOVIE/",

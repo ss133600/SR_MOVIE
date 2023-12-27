@@ -28,7 +28,6 @@ const MovieTitle = styled.h4`
   font-size: 20px;
   text-align: center;
   @media screen and (max-width: 450px) {
-    /* font-size: 16px; */
     line-height: 25px;
   }
 `;
