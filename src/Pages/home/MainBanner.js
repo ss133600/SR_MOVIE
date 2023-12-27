@@ -47,13 +47,11 @@ const BlackBg = styled.section`
   height: 100vh;
   background: rgb(255, 255, 255);
   background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.39280125195618154) 0%,
-    rgba(130, 130, 130, 0.29744397759103647) 25%,
-    rgba(54, 54, 54, 0.6924019607843137) 45%,
-    rgba(0, 0, 0, 0.7876400560224089) 65%
+    rgb(255 255 255 / 0%) 0%,
+    rgb(130 130 130 / 0%) 25%,
+    rgb(54 54 54 / 19%) 45%,
+    rgb(0 0 0 / 52%) 65%
   );
-
   position: absolute;
   top: 0;
   left: 0;
