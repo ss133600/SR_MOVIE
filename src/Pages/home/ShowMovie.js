@@ -6,19 +6,27 @@ import { Link } from "react-router-dom";
 const Title = styled.h3`
   font-size: 50px;
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   @media screen and (max-width: 450px) {
     font-size: 30px;
     margin-bottom: 30px;
   }
 `;
 const CoverBg = styled.div`
-  height: 420px;
+  height: 480px;
   background: url(${IMG_URL}/w500/${(prop) => prop.$bgUrl}) no-repeat center /
     cover;
   border-radius: 15px;
-  margin-bottom: 20px;
-
+  margin-bottom: 25px;
+  @media screen and (max-width: 1250px) {
+    height: 380px;
+  }
+  @media screen and (max-width: 850px) {
+    height: 300px;
+  }
+  @media screen and (max-width: 650px) {
+    height: 300px;
+  }
   @media screen and (max-width: 450px) {
     height: 250px;
     margin-bottom: 15px;
@@ -27,12 +35,17 @@ const CoverBg = styled.div`
 const MovieTitle = styled.h4`
   font-size: 20px;
   text-align: center;
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 650px) {
     line-height: 25px;
+    font-size: 18px;
+  }
+  @media screen and (max-width: 450px) {
+    line-height: 20px;
+    font-size: 14px;
   }
 `;
 const Container = styled.section`
-  padding-bottom: 80px;
+  padding-bottom: 150px;
   a {
     color: white;
   }
@@ -45,9 +58,9 @@ const params = {
   spaceBetween: 20,
   slidesPerView: 5.5,
   breakpoints: {
-    1024: {
+    1524: {
       spaceBetween: 20,
-      slidesPerView: 5.5,
+      slidesPerView: 4.5,
     },
     640: {
       spaceBetween: 15,

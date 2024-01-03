@@ -3,7 +3,7 @@ import reset from "styled-reset";
 
 export const mainColors = {
   blackColor: "#1d1d1d",
-  pointColor: "#FF597B",
+  pointColor: "#FF0044",
 };
 
 export const GlobalStyled = createGlobalStyle`

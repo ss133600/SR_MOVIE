@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { Layout } from "../../components/Layout";
 import { IMG_URL } from "../../constants";
 import { Link } from "react-router-dom/dist";
+import { useScrollTop } from "../../lib/useScrollTop";
 
 const Title = styled.div`
   font-size: 35px;
@@ -36,7 +37,7 @@ const Input = styled.input`
   /* color: #444444; */
   width: 80%;
   border: none;
-  border-bottom: solid #ff0060 1px;
+  border-bottom: solid #ff0044 1px;
   padding-bottom: 10px;
   padding-top: 10px;
   padding-left: 10px;
@@ -56,14 +57,17 @@ const ConWrap = styled.div`
   grid-template-columns: repeat(5, 1fr);
   column-gap: 30px;
   row-gap: 50px;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1500px) {
     grid-template-columns: repeat(4, 1fr);
   }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1000px) {
     grid-template-columns: repeat(3, 1fr);
   }
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 750px) {
     grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 350px) {
+    height: 100px;
   }
 `;
 const Con = styled.div`
@@ -77,21 +81,35 @@ const Con = styled.div`
 `;
 const Bg = styled.div`
   height: 450px;
+  /* width: 300px; */
   background: url(${IMG_URL}/w500/${(prop) => prop.$bgUrl}) no-repeat center /
     cover;
   margin-bottom: 20px;
   border-radius: 15px;
 
-  @media screen and (max-width: 800px) {
-    height: 600px;
+  @media screen and (max-width: 1700px) {
+    height: 350px;
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1500px) {
+    height: 450px;
+  }
+  @media screen and (max-width: 900px) {
+    height: 350px;
+  }
+  @media screen and (max-width: 600px) {
     height: 300px;
   }
 `;
-const MovieTitle = styled.div``;
+const MovieTitle = styled.div`
+  line-height: 30px;
+  @media screen and (max-width: 600px) {
+    line-height: 22px;
+  }
+`;
 
 export const Search = () => {
+  useScrollTop();
+
   const {
     register,
     handleSubmit,

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { useEffect } from "react";
 import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   faCircleUser,
   faCompactDisc,
@@ -12,10 +13,17 @@ import {
 
 const Line = styled.div`
   display: flex;
+  @media screen and (max-width: 650px) {
+    font-size: 30px;
+  }
 `;
 const LogoBtn = styled.div`
   margin: -2px 2px;
   font-size: 36px;
+  color: #ff0044;
+  @media screen and (max-width: 650px) {
+    font-size: 33px;
+  }
 `;
 const SHeader = styled.header`
   width: 100%;
@@ -44,14 +52,22 @@ const Menu = styled.ul`
   li {
     margin-left: 35px;
   }
+  @media screen and (max-width: 650px) {
+    li {
+      margin-left: 30px;
+    }
+  }
 `;
 
 const UserBtn = styled.div`
   font-size: 35px;
   font-weight: 900;
+  @media screen and (max-width: 650px) {
+    font-size: 30px;
+  }
 `;
 const SearchBtn = styled.div`
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 900;
 `;
 export const Header = () => {

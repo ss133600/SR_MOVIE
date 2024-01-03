@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { ErrorMessage } from "../../components/ErrorMessage";
 import { ButtonUi } from "../../components/ButtonUi";
 import { routes } from "../../routes";
+import { useScrollTop } from "../../lib/useScrollTop";
 
 const Wrap = styled.div`
   height: 100vh;
@@ -17,20 +18,21 @@ const Form = styled.form`
   align-items: center;
   justify-content: center;
   height: 700px;
-  border: 1px solid white;
+  border: 1px solid #777;
   padding: 30px 50px;
   border-radius: 15px;
   margin-top: 100px;
   flex-direction: column;
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 450px) {
     max-width: 350px;
     height: 650px;
+    border: none;
     width: 100%;
   }
 `;
 const Title = styled.h3`
   font-size: 45px;
-  font-weight: 900px;
+  font-weight: 700;
   color: white;
   margin-bottom: 40px;
 `;
@@ -52,15 +54,19 @@ const Input = styled.input`
 const BottomInfo = styled.div`
   margin-top: 30px;
   display: flex;
+  font-weight: 300;
 `;
 
 const Span = styled.div`
   margin-left: 15px;
   text-decoration: none;
   color: white;
+  font-weight: 300;
+  text-decoration: underline;
 `;
 
 export const Signup = () => {
+  useScrollTop();
   const {
     register,
     handleSubmit,

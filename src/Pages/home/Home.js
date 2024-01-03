@@ -9,12 +9,12 @@ import { PageTitle } from "../../components/PageTitle";
 import { useScrollTop } from "../../lib/useScrollTop";
 
 export const Home = () => {
+  useScrollTop();
   const [nowPlayingData, setNowPlayingData] = useState();
   const [popData, setPopData] = useState();
   const [commingData, setCommingData] = useState();
   const [topRatedData, setTopRatedData] = useState();
   const [loading, setLoading] = useState(true);
-  useScrollTop();
 
   useEffect(() => {
     (async () => {
