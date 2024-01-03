@@ -18,7 +18,7 @@ const Form = styled.form`
   align-items: center;
   justify-content: center;
   height: 700px;
-  border: 1px solid #777;
+  border: 1px solid #696969;
   padding: 30px 50px;
   border-radius: 15px;
   margin-top: 100px;

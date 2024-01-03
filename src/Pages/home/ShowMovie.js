@@ -35,6 +35,9 @@ const CoverBg = styled.div`
 const MovieTitle = styled.h4`
   font-size: 20px;
   text-align: center;
+  font-weight: 400;
+  color: #fafafa;
+
   @media screen and (max-width: 650px) {
     line-height: 25px;
     font-size: 18px;

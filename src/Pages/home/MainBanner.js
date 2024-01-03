@@ -22,7 +22,7 @@ const SMainBanner = styled.section`
   h3 {
     max-width: 700px;
     width: 100%;
-    line-height: 100px;
+    line-height: 110px;
     font-size: 85px;
     font-weight: 700;
     margin-bottom: 30px;
@@ -35,7 +35,7 @@ const SMainBanner = styled.section`
     width: 100%;
     font-size: 19px;
     font-weight: 300;
-    line-height: 26px;
+    line-height: 30px;
     opacity: 0.8;
     @media screen and (max-width: 850px) {
       font-size: 16px;
