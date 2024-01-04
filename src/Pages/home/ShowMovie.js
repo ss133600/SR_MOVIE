@@ -28,7 +28,7 @@ const CoverBg = styled.div`
     height: 300px;
   }
   @media screen and (max-width: 450px) {
-    height: 250px;
+    height: 220px;
     margin-bottom: 15px;
   }
 `;
@@ -37,7 +37,7 @@ const MovieTitle = styled.h4`
   text-align: center;
   font-weight: 400;
   color: #fafafa;
-
+  line-height: 25px;
   @media screen and (max-width: 650px) {
     line-height: 25px;
     font-size: 18px;

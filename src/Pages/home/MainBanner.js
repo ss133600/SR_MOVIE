@@ -22,7 +22,7 @@ const SMainBanner = styled.section`
   h3 {
     max-width: 700px;
     width: 100%;
-    line-height: 110px;
+    line-height: 100px;
     font-size: 85px;
     font-weight: 700;
     margin-bottom: 30px;

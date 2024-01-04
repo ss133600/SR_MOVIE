@@ -7,7 +7,15 @@ import { IMG_URL } from "../../constants";
 import { useScrollTop } from "../../lib/useScrollTop";
 
 const ConBox = styled.div`
-  /* max-width: 1200px; */
+  max-width: 1920px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  /* background-color: yellow; */
+  /* filter: none; */
+  /* max-width: 1200px;
   width: 70%;
   height: 700px;
   padding: 50px 50px;
@@ -16,78 +24,92 @@ const ConBox = styled.div`
   margin-bottom: 10%;
   background-color: rgba(0, 0, 0, 0.8);
   justify-content: center;
-  /* flex-direction: column; */
+  flex-direction: column;
   align-items: center;
   border-radius: 15px;
   @media screen and(max-width:1200px ) {
     display: none;
     flex-direction: column;
-  }
+  } */
 `;
-const Container = styled.div`
-  display: flex;
+const Container = styled.section`
+  /* background: url(${IMG_URL}/w1280/${(props) => props.$bgUrl}) no-repeat
+    center/cover; */
+  width: 100%;
+  background: url(${IMG_URL}/w1280/${(prop) => prop.$bgUrl}) no-repeat center /
+    cover;
+  /* filter: blur(5px); */
+  height: 100vh;
+  /* z-index: -99; */
+  /* display: flex;
   justify-content: center;
   align-items: center;
   background: url(${IMG_URL}/w1280/${(props) => props.$bgUrl}) no-repeat
     center/cover;
-  /* filter: blur(5px); */
+  filter: blur(5px);
   @media screen and(max-width:450px ) {
     padding: 0px 0px;
-    /* flex-direction: column; */
-    /* padding: 100px 5%; */
-  }
+    flex-direction: column;
+    padding: 100px 5%;
+  } */
 `;
+
 const Bg = styled.div`
-  /* max-width: 35%; */
+  /* background: url(${IMG_URL}/w1280/${(props) => props.$bgUrl}) no-repeat; */
+  background: url(${IMG_URL}/w1280/${(prop) => prop.$bgUrl}) no-repeat center /
+    cover;
+  width: 500px;
+  height: 650px;
+  /* max-width: 35%;
   width: 400px;
   height: 600px;
   border-radius: 15px;
-  background: url(${IMG_URL}/w1280/${(props) => props.$bgUrl}) no-repeat
     center/cover;
   @media screen and(max-width:1200px ) {
     width: 70px;
-  }
+  } */
 `;
 const Con = styled.div`
-  width: 40%;
+  /* width: 40%;
   font-size: 20px;
-  /* padding-top: 50px; */
+  padding-top: 50px;
   margin-left: 7%;
   @media screen and(max-width:450px ) {
     width: 100%;
   }
   @media screen and(max-width:1200px ) {
-    /* width: 500px; */
+    width: 500px;
     background-color: white;
     flex-direction: column;
     display: none;
-  }
+  } */
 `;
 const Title = styled.h3`
-  font-size: 55px;
+  font-size: 60px;
+  /* font-size: 55px;
   font-weight: 700;
   margin-bottom: 50px;
   @media screen and(max-width:450px ) {
     font-size: 30px;
-  }
+  } */
 `;
 const Rated = styled.div`
-  font-weight: 400;
+  /* font-weight: 400; */
 `;
 const Genres = styled.ul`
-  margin: 20px 0;
+  /* margin: 20px 0;
   li {
     list-style: disc;
     margin-left: 20px;
     margin-bottom: 20px;
-  }
+  } */
 `;
 const Release = styled.div`
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 `;
 const Runtime = styled.div``;
 const Desc = styled.p`
-  max-width: 370px;
+  /* max-width: 370px;
   width: 100%;
   margin-top: 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -97,7 +119,7 @@ const Desc = styled.p`
   font-weight: 300;
   @media screen and(max-width:450px ) {
     max-width: 100%;
-  }
+  } */
 `;
 
 export const Detail = () => {
@@ -118,30 +140,29 @@ export const Detail = () => {
     })();
   }, []);
 
-  // console.log(detailData);
+  console.log(detailData);
 
   return (
     <div>
       {loading ? (
         <Loading />
       ) : (
-        <Container $bgUrl={detailData.backdrop_path}>
-          <ConBox>
-            <Bg $bgUrl={detailData.poster_path} />
-            <Con>
-              <Title>{detailData.title}</Title>
-              <Rated>평점 : {Math.round(detailData.vote_average)}점</Rated>
-              <Genres>
-                {detailData.genres.map((genres) => (
-                  <li key={genres.id}>{genres.name}</li>
-                ))}
-              </Genres>
-              <Release>{detailData.release_date}</Release>
-              <Runtime>{detailData.runtime}분</Runtime>
-              <Desc>{detailData.overview.slice(0, 120) + "..."}</Desc>
-            </Con>
-          </ConBox>
-        </Container>
+        // <Container $bgUrl={detailData.backdrop_path}></Container>
+        <ConBox>
+          <Bg $bgUrl={detailData.poster_path} />
+          <Con>
+            <Title>{detailData.title}</Title>
+            <Rated>평점 : {Math.round(detailData.vote_average)}점</Rated>
+            <Genres>
+              {detailData.genres.map((genres) => (
+                <li key={genres.id}>{genres.name}</li>
+              ))}
+            </Genres>
+            <Release>{detailData.release_date}</Release>
+            <Runtime>{detailData.runtime}분</Runtime>
+            <Desc>{detailData.overview.slice(0, 120) + "..."}</Desc>
+          </Con>
+        </ConBox>
       )}
     </div>
   );
