@@ -16,6 +16,9 @@ const Line = styled.div`
   @media screen and (max-width: 650px) {
     font-size: 30px;
   }
+  @media screen and (max-width: 450px) {
+    font-size: 25px;
+  }
 `;
 const LogoBtn = styled.div`
   margin: -2px 2px;
@@ -23,6 +26,9 @@ const LogoBtn = styled.div`
   color: #ff0044;
   @media screen and (max-width: 650px) {
     font-size: 33px;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: 25px;
   }
 `;
 const SHeader = styled.header`
@@ -65,10 +71,16 @@ const UserBtn = styled.div`
   @media screen and (max-width: 650px) {
     font-size: 30px;
   }
+  @media screen and (max-width: 450px) {
+    font-size: 25px;
+  }
 `;
 const SearchBtn = styled.div`
   font-size: 28px;
   font-weight: 900;
+  @media screen and (max-width: 450px) {
+    font-size: 25px;
+  }
 `;
 export const Header = () => {
   const headerRef = useRef();
