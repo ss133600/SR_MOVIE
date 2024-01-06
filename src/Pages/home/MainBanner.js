@@ -31,7 +31,7 @@ const SMainBanner = styled.section`
     }
   }
   p {
-    max-width: 700px;
+    max-width: 710px;
     width: 100%;
     font-size: 19px;
     font-weight: 300;

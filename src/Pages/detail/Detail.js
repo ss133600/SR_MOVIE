@@ -6,13 +6,34 @@ import { Loading } from "../../components/Loading";
 import { IMG_URL } from "../../constants";
 import { useScrollTop } from "../../lib/useScrollTop";
 
+const Container = styled.section`
+  background: url(${IMG_URL}/w1280/${(props) => props.$bgUrl}) no-repeat
+    center/cover;
+  width: 100%;
+  /* filter: blur(5px); */
+  height: 100vh;
+  /* z-index: -99; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(${IMG_URL}/w1280/${(props) => props.$bgUrl}) no-repeat
+    center/cover;
+  filter: blur(5px);
+  @media screen and(max-width:450px ) {
+    padding: 0px 0px;
+    flex-direction: column;
+    padding: 100px 5%;
+  } */
+`;
+
 const ConBox = styled.div`
   max-width: 1920px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  padding-top: 150px;
+  /* filter: blur(5px); */
   /* background-color: yellow; */
   /* filter: none; */
   /* max-width: 1200px;
@@ -32,27 +53,6 @@ const ConBox = styled.div`
     flex-direction: column;
   } */
 `;
-const Container = styled.section`
-  /* background: url(${IMG_URL}/w1280/${(props) => props.$bgUrl}) no-repeat
-    center/cover; */
-  width: 100%;
-  background: url(${IMG_URL}/w1280/${(prop) => prop.$bgUrl}) no-repeat center /
-    cover;
-  /* filter: blur(5px); */
-  height: 100vh;
-  /* z-index: -99; */
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url(${IMG_URL}/w1280/${(props) => props.$bgUrl}) no-repeat
-    center/cover;
-  filter: blur(5px);
-  @media screen and(max-width:450px ) {
-    padding: 0px 0px;
-    flex-direction: column;
-    padding: 100px 5%;
-  } */
-`;
 
 const Bg = styled.div`
   /* background: url(${IMG_URL}/w1280/${(props) => props.$bgUrl}) no-repeat; */
@@ -64,7 +64,7 @@ const Bg = styled.div`
   width: 400px;
   height: 600px;
   border-radius: 15px;
-    center/cover;
+
   @media screen and(max-width:1200px ) {
     width: 70px;
   } */
@@ -147,22 +147,23 @@ export const Detail = () => {
       {loading ? (
         <Loading />
       ) : (
-        // <Container $bgUrl={detailData.backdrop_path}></Container>
-        <ConBox>
-          <Bg $bgUrl={detailData.poster_path} />
-          <Con>
-            <Title>{detailData.title}</Title>
-            <Rated>평점 : {Math.round(detailData.vote_average)}점</Rated>
-            <Genres>
-              {detailData.genres.map((genres) => (
-                <li key={genres.id}>{genres.name}</li>
-              ))}
-            </Genres>
-            <Release>{detailData.release_date}</Release>
-            <Runtime>{detailData.runtime}분</Runtime>
-            <Desc>{detailData.overview.slice(0, 120) + "..."}</Desc>
-          </Con>
-        </ConBox>
+        <Container $bgUrl={detailData.backdrop_path}>
+          <ConBox>
+            <Bg $bgUrl={detailData.poster_path} />
+            <Con>
+              <Title>{detailData.title}</Title>
+              <Rated>평점 : {Math.round(detailData.vote_average)}점</Rated>
+              <Genres>
+                {detailData.genres.map((genres) => (
+                  <li key={genres.id}>{genres.name}</li>
+                ))}
+              </Genres>
+              <Release>{detailData.release_date}</Release>
+              <Runtime>{detailData.runtime}분</Runtime>
+              <Desc>{detailData.overview.slice(0, 120) + "..."}</Desc>
+            </Con>
+          </ConBox>
+        </Container>
       )}
     </div>
   );
