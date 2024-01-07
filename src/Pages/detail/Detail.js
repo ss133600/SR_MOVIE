@@ -12,18 +12,15 @@ const Container = styled.section`
   width: 100%;
   /* filter: blur(5px); */
   height: 100vh;
-  /* z-index: -99; */
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url(${IMG_URL}/w1280/${(props) => props.$bgUrl}) no-repeat
+
+  /* background: url(${IMG_URL}/w1280/${(props) => props.$bgUrl}) no-repeat
     center/cover;
   filter: blur(5px);
   @media screen and(max-width:450px ) {
     padding: 0px 0px;
     flex-direction: column;
     padding: 100px 5%;
-  } */
+  }  */
 `;
 
 const ConBox = styled.div`
