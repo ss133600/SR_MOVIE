@@ -104,7 +104,9 @@ const Genres = styled.ul`
 const Release = styled.div`
   /* margin-bottom: 20px; */
 `;
-const Runtime = styled.div``;
+const Runtime = styled.div`
+  padding: 100px;
+`;
 const Desc = styled.p`
   /* max-width: 370px;
   width: 100%;
