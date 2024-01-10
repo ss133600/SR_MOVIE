@@ -12,6 +12,7 @@ const Container = styled.section`
   width: 100%;
   /* filter: blur(5px); */
   height: 100vh;
+  /* display: flex; */
 
   /* background: url(${IMG_URL}/w1280/${(props) => props.$bgUrl}) no-repeat
     center/cover;
@@ -24,12 +25,14 @@ const Container = styled.section`
 `;
 
 const ConBox = styled.div`
-  max-width: 1920px;
+  /* max-width: 1920px; */
+  /* max-width: 700px; */
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: 150px;
+  /* background-color: gainsboro; */
   /* filter: blur(5px); */
   /* background-color: yellow; */
   /* filter: none; */
@@ -55,7 +58,7 @@ const Bg = styled.div`
   /* background: url(${IMG_URL}/w1280/${(props) => props.$bgUrl}) no-repeat; */
   background: url(${IMG_URL}/w1280/${(prop) => prop.$bgUrl}) no-repeat center /
     cover;
-  width: 500px;
+  width: 450px;
   height: 650px;
   /* max-width: 35%;
   width: 400px;
@@ -67,6 +70,10 @@ const Bg = styled.div`
   } */
 `;
 const Con = styled.div`
+  background-color: #1a1a1acc;
+  max-width: 750px;
+  width: 100%;
+  height: 650px;
   /* width: 40%;
   font-size: 20px;
   padding-top: 50px;
@@ -105,7 +112,7 @@ const Release = styled.div`
   /* margin-bottom: 20px; */
 `;
 const Runtime = styled.div`
-  padding: 100px;
+  /* padding: 100px; */
 `;
 const Desc = styled.p`
   /* max-width: 370px;
