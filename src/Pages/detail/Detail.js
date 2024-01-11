@@ -61,8 +61,7 @@ const Bg = styled.div`
   width: 450px;
   height: 650px;
   /* max-width: 35%;
-  width: 400px;
-  height: 600px;
+  
   border-radius: 15px;
 
   @media screen and(max-width:1200px ) {
@@ -75,8 +74,7 @@ const Con = styled.div`
   width: 100%;
   height: 650px;
   /* width: 40%;
-  font-size: 20px;
-  padding-top: 50px;
+
   margin-left: 7%;
   @media screen and(max-width:450px ) {
     width: 100%;
