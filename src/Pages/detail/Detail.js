@@ -106,18 +106,12 @@ const Genres = styled.ul`
     margin-bottom: 20px;
   } */
 `;
-const Release = styled.div`
-  /* margin-bottom: 20px; */
-`;
-const Runtime = styled.div`
-  /* padding: 100px; */
-`;
+const Release = styled.div``;
+const Runtime = styled.div``;
 const Desc = styled.p`
   /* max-width: 370px;
   width: 100%;
-  margin-top: 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
-  padding-top: 30px;
   opacity: 0.7;
   line-height: 1.8em;
   font-weight: 300;
