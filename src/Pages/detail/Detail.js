@@ -29,8 +29,8 @@ const ConBox = styled.div`
   /* max-width: 700px; */
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   padding-top: 150px;
   /* background-color: gainsboro; */
   /* filter: blur(5px); */
