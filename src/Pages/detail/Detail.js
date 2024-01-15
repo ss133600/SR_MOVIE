@@ -31,7 +31,7 @@ const ConBox = styled.div`
   display: flex;
   /* align-items: center; */
   /* justify-content: center; */
-  padding-top: 150px;
+  /* padding-top: 150px; */
   /* background-color: gainsboro; */
   /* filter: blur(5px); */
   /* background-color: yellow; */
