@@ -35,7 +35,6 @@ const ConBox = styled.div`
   /* background-color: gainsboro; */
   /* filter: blur(5px); */
   /* background-color: yellow; */
-  /* filter: none; */
   /* max-width: 1200px;
   width: 70%;
   height: 700px;
@@ -49,7 +48,6 @@ const ConBox = styled.div`
   align-items: center;
   border-radius: 15px;
   @media screen and(max-width:1200px ) {
-    display: none;
     flex-direction: column;
   } */
 `;
