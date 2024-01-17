@@ -58,9 +58,8 @@ const Bg = styled.div`
     cover;
   width: 450px;
   height: 650px;
-  /* max-width: 35%;
+  /* 
   
-  border-radius: 15px;
 
   @media screen and(max-width:1200px ) {
     width: 70px;
