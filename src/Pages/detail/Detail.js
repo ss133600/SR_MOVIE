@@ -54,11 +54,12 @@ const ConBox = styled.div`
 
 const Bg = styled.div`
   /* background: url(${IMG_URL}/w1280/${(props) => props.$bgUrl}) no-repeat; */
-  background: url(${IMG_URL}/w1280/${(prop) => prop.$bgUrl}) no-repeat center /
+  /* background: url(${IMG_URL}/w1280/${(prop) =>
+  prop.$bgUrl}) no-repeat center /
     cover;
   width: 450px;
   height: 650px;
-  /* 
+  */
   
 
   @media screen and(max-width:1200px ) {
