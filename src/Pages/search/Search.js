@@ -20,13 +20,11 @@ const Form = styled.form`
   margin-left: 150px;
   margin-left: 10%;
 
-  margin-top: 50px;
+  margin-top: 53px;
   position: relative;
   /* margin: 150px auto; */
   justify-content: center;
   align-items: center;
-  /* width: 100%; */
-  /* color: white; */
   @media screen and (max-width: 600px) {
     font-size: 19px;
     margin-left: 50px;
@@ -34,7 +32,6 @@ const Form = styled.form`
   }
 `;
 const Input = styled.input`
-  /* color: #444444; */
   width: 80%;
   border: none;
   border-bottom: solid #ff0044 1px;
@@ -81,7 +78,6 @@ const Con = styled.div`
 `;
 const Bg = styled.div`
   height: 450px;
-  /* width: 300px; */
   background: url(${IMG_URL}/w500/${(prop) => prop.$bgUrl}) no-repeat center /
     cover;
   margin-bottom: 20px;
