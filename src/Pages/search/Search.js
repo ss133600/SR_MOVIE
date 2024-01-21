@@ -22,7 +22,6 @@ const Form = styled.form`
 
   margin-top: 53px;
   position: relative;
-  /* margin: 150px auto; */
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 600px) {
@@ -42,7 +41,7 @@ const Input = styled.input`
   background: none;
   z-index: 5;
   outline: none;
-  font-size: 25px;
+  font-size: 23px;
   color: white;
   @media screen and (max-width: 600px) {
     font-size: 20px;
