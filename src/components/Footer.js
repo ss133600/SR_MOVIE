@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Container = styled.footer`
-  padding: 50px;
+  padding: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
