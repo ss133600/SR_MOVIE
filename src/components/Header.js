@@ -33,7 +33,7 @@ const LogoBtn = styled.div`
 `;
 const SHeader = styled.header`
   width: 100%;
-  padding: 20px 5%;
+  padding: 22px 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
