@@ -34,9 +34,9 @@ const Input = styled.input`
   width: 80%;
   border: none;
   border-bottom: solid #ff0044 1px;
-  padding-bottom: 12px;
-  padding-top: 12px;
-  padding-left: 12px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
   position: relative;
   background: none;
   z-index: 5;
