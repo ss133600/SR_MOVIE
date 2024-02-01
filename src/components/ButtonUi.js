@@ -14,7 +14,7 @@ export const Button = styled.button`
   opacity: ${(props) => (props.$isActive ? 1 : 0.5)};
   cursor: ${(props) => (props.$isActive ? "pointer" : "default")};
   @media screen and (max-width: 650px) {
-    width: 260px;
+    width: 250px;
   }
 `;
 
