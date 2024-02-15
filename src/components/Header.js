@@ -22,7 +22,7 @@ const Line = styled.div`
 `;
 const LogoBtn = styled.div`
   margin: -2px 2px;
-  font-size: 36px;
+  font-size: 35px;
   color: #ff0044;
   @media screen and (max-width: 650px) {
     font-size: 33px;
