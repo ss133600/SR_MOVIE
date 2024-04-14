@@ -6,116 +6,128 @@ import { Loading } from "../../components/Loading";
 import { IMG_URL } from "../../constants";
 import { useScrollTop } from "../../lib/useScrollTop";
 
-const Container = styled.section`
-  background: url(${IMG_URL}/w1280/${(props) => props.$bgUrl}) no-repeat
-    center/cover;
-  width: 100%;
-  /* filter: blur(5px); */
-  height: 100vh;
-  /* display: flex; */
-
-  /* background: url(${IMG_URL}/w1280/${(props) => props.$bgUrl}) no-repeat
-    center/cover;
-  filter: blur(5px);
-  @media screen and(max-width:450px ) {
-    padding: 0px 0px;
-    flex-direction: column;
-    padding: 100px 5%;
-  }  */
+const Container = styled.div`
+  background: url(${({ bgUrl }) => bgUrl}) no-repeat center/cover;
+  padding: 50px;
+  min-height: 100vh;
+  position: relative; /* 배경과 내용을 겹치기 위해 position을 설정합니다. */
 `;
 
-const ConBox = styled.div`
-  /* max-width: 1920px; */
-  /* max-width: 700px; */
+const Overlay = styled.div`
+  background-color: rgba(0, 0, 0, 0.7); /* 불투명한 배경을 생성합니다. */
+  position: absolute; /* 상위 컨테이너에 대해 상대적으로 위치를 설정합니다. */
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+`;
+
+const Content = styled.div`
   display: flex;
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* padding-top: 150px; */
-  /* background-color: gainsboro; */
-  /* filter: blur(5px); */
-  /* background-color: yellow; */
-  /* max-width: 1200px;
-  width: 70%;
-  height: 700px;
-  padding: 50px 50px;
-  display: flex;
-  margin-top: 10%;
-  margin-bottom: 10%;
-  background-color: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 15px;
-  @media screen and(max-width:1200px ) {
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px;
+  position: relative; /* 상위 요소에 대해 상대적으로 위치를 설정합니다. */
+  z-index: 1; /* 내용을 배경 위로 올립니다. */
+  @media screen and (max-width: 1000px) {
     flex-direction: column;
-  } */
-`;
-
-const Bg = styled.div`
-  /* background: url(${IMG_URL}/w1280/${(props) => props.$bgUrl}) no-repeat; */
-  /* background: url(${IMG_URL}/w1280/${(prop) =>
-  prop.$bgUrl}) no-repeat center /
-    cover;
-  width: 450px;
-  height: 650px;
-  */
-  
-
-  @media screen and(max-width:1200px ) {
-    width: 70px;
-  } */
-`;
-const Con = styled.div`
-  background-color: #1a1a1acc;
-  max-width: 750px;
-  width: 100%;
-  height: 650px;
-  /* width: 40%;
-
-  margin-left: 7%;
-  @media screen and(max-width:450px ) {
-    width: 100%;
   }
-  @media screen and(max-width:1200px ) {
-    width: 500px;
-    background-color: white;
-    flex-direction: column;
-    display: none;
-  } */
 `;
-const Title = styled.h3`
+
+const ImageWrapper = styled.div`
+  flex: 1;
+  max-width: 70%;
+`;
+
+const Image = styled.img`
+  max-width: 100%;
+  border-radius: 10px;
+  @media screen and (max-width: 1000px) {
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+`;
+
+const Info = styled.div`
+  flex: 1;
+  margin-left: 70px;
+  @media screen and (max-width: 1000px) {
+    margin: 0 auto;
+  }
+`;
+
+const Title = styled.h1`
   font-size: 60px;
-  /* font-size: 55px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 50px;
-  @media screen and(max-width:450px ) {
+  color: #fff;
+  @media screen and (max-width: 800px) {
+    font-size: 50px;
+  }
+  @media screen and (max-width: 650px) {
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+  @media screen and (max-width: 450px) {
     font-size: 30px;
-  } */
+    margin-bottom: 40px;
+  }
 `;
-const Rated = styled.div`
-  /* font-weight: 400; */
+
+const Rating = styled.div`
+  font-size: 23px;
+  margin-bottom: 10px;
+  color: #fff;
+  @media screen and (max-width: 800px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 650px) {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
 `;
-const Genres = styled.ul`
-  /* margin: 20px 0;
-  li {
-    list-style: disc;
-    margin-left: 20px;
+
+const Genre = styled.div`
+  font-size: 23px;
+  margin-bottom: 50px; /* 아래 여백을 줄입니다. */
+  color: #fff;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.2); /* 연하게 밑줄을 추가합니다. */
+  padding-bottom: 50px; /* 밑줄과 아래쪽 여백을 추가합니다. */
+  @media screen and (max-width: 800px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 650px) {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: 16px;
     margin-bottom: 20px;
-  } */
+  }
 `;
-const Release = styled.div``;
-const Runtime = styled.div``;
-const Desc = styled.p`
-  /* max-width: 370px;
-  width: 100%;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  opacity: 0.7;
-  line-height: 1.8em;
-  font-weight: 300;
-  @media screen and(max-width:450px ) {
-    max-width: 100%;
-  } */
+
+const Description = styled.p`
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #fff;
+  @media screen and (max-width: 800px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 650px) {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
 `;
 
 export const Detail = () => {
@@ -131,36 +143,35 @@ export const Detail = () => {
         setDatailData(data);
         setLoading(false);
       } catch (error) {
-        // console.log("Error: " + error);
+        console.error("Error fetching movie details: ", error);
       }
     })();
-  }, []);
+  }, [id]);
 
-  console.log(detailData);
+  // detailData가 정의되지 않은 경우를 처리합니다.
+  if (!detailData) {
+    return <Loading />;
+  }
 
   return (
-    <div>
-      {loading ? (
-        <Loading />
-      ) : (
-        <Container $bgUrl={detailData.backdrop_path}>
-          <ConBox>
-            <Bg $bgUrl={detailData.poster_path} />
-            <Con>
-              <Title>{detailData.title}</Title>
-              <Rated>평점 : {Math.round(detailData.vote_average)}점</Rated>
-              <Genres>
-                {detailData.genres.map((genres) => (
-                  <li key={genres.id}>{genres.name}</li>
-                ))}
-              </Genres>
-              <Release>{detailData.release_date}</Release>
-              <Runtime>{detailData.runtime}분</Runtime>
-              <Desc>{detailData.overview.slice(0, 120) + "..."}</Desc>
-            </Con>
-          </ConBox>
-        </Container>
-      )}
-    </div>
+    <Container bgUrl={`${IMG_URL}/w1280/${detailData.backdrop_path}`}>
+      <Overlay /> {/* 불투명한 배경을 추가합니다. */}
+      <Content>
+        <ImageWrapper>
+          <Image
+            src={`${IMG_URL}/w1280/${detailData.poster_path}`}
+            alt={detailData.title}
+          />
+        </ImageWrapper>
+        <Info>
+          <Title>{detailData.title}</Title>
+          <Rating>✨ 평점: {detailData.vote_average}</Rating>
+          <Genre>
+            📽️ 장르: {detailData.genres.map((genre) => genre.name).join(", ")}
+          </Genre>
+          <Description>ㆍ{detailData.overview}</Description>
+        </Info>
+      </Content>
+    </Container>
   );
 };

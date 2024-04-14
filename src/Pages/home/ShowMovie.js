@@ -13,7 +13,7 @@ const Title = styled.h3`
   }
 `;
 const CoverBg = styled.div`
-  height: 480px;
+  height: 520px;
   background: url(${IMG_URL}/w500/${(prop) => prop.$bgUrl}) no-repeat center /
     cover;
   border-radius: 15px;
