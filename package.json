@@ -1,4 +1,5 @@
 {
+  "homepage": "https://ss133600.github.io/SR_MOVIE/",
   "name": "srmovie",
   "version": "0.1.0",
   "private": true,
@@ -35,7 +36,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "http://ss133600.github.io/SR_MOVIE/",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -55,6 +55,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.0"
+    "gh-pages": "^6.1.1"
   }
 }
